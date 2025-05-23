@@ -1,0 +1,50 @@
+[
+  {
+    "kode_produk": "KUE001",
+    "nama_produk": "Kue Lapis Legit",
+    "harga": 85000,
+    "stok": 12
+  },
+  {
+    "kode_produk": "KUE002",
+    "nama_produk": "Brownies Coklat",
+    "harga": 65000,
+    "stok": 0
+  },
+  {
+    "kode_produk": "KUE003",
+    "nama_produk": "Kue Nastar",
+    "harga": 50000,
+    "stok": 25
+  },
+  {
+    "kode_produk": "KUE004",
+    "nama_produk": "Kue Putri Salju",
+    "harga": 55000,
+    "stok": 8
+  },
+  {
+    "kode_produk": "KUE005",
+    "nama_produk": "Kue Kering Coklat Chip",
+    "harga": 60000,
+    "stok": 0
+  },
+  {
+    "kode_produk": "BEST02",
+    "nama_produk": "KUE ULANG TAHUN SEDAAP",
+    "harga": 60000,
+    "stok": 30
+  },
+  {
+    "kode_produk": "BEST01",
+    "nama_produk": "CUPCAKE GEMAS SEDAAP",
+    "harga": 60000,
+    "stok": 10
+  },
+  {
+    "kode_produk": "BEST03",
+    "nama_produk": "PANCAKE SEDAAP",
+    "harga": 60000,
+    "stok": 0
+  }
+]

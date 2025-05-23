@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Kue Ulang Tahun Sedaap",
+    "image": "/images/kue1.jpg",
+    "price": 12000
+  },
+  {
+    "id": 2,
+    "name": "Cupcake Gemas Sedaap",
+    "image": "/images/kue2.jpg",
+    "price": 13000
+  },
+  {
+    "id": 3,
+    "name": "Pancake Sedaap",
+    "image": "/images/kue3.jpg",
+    "price": 11000
+  }
+]

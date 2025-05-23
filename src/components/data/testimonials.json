@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Awa",
+    "avatar": "/images/awa.png",
+    "review": "Rasanya enak!"
+  },
+  {
+    "id": 2,
+    "name": "Sarah",
+    "avatar": "/images/sarah.png",
+    "review": "Saya suka!"
+  },
+  {
+    "id": 3,
+    "name": "Dana",
+    "avatar": "/images/dana.png",
+    "review": "Boleeeh"
+  },
+  {
+    "id": 4,
+    "name": "Dini",
+    "avatar": "/images/dini.png",
+    "review": "Mantap!"
+  },
+  {
+    "id": 5,
+    "name": "Dwi",
+    "avatar": "/images/deni.png",
+    "review": "Harga Murah"
+  }
+]

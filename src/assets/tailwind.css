@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('fonts/Barlow-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-ExtraBold';
+    src: url('fonts/Poppins-ExtraBold.ttf');
+}
+
+@theme {
+    --font-barlow: "Barlow", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-poppins-extrabold: "Poppins-ExtraBold", sans-serif;
+}
+
+body {
+    @apply font-barlow;
+}
+
+@theme {
+    --color-latar: #f3f4f6;
+    --color-teks: #374151; 
+    --color-teks-samping: #6b7280;
+    --color-garis: #e5e7eb; 
+    --color-hijau: #00B074; 
+    --color-merah: #ef4444; 
+    --color-biru: #3b82f6;
+    --color-kuning: #f59e0b; 
+}
+@layer utilities {
+    .animate-fadeIn {
+      animation: fadeIn 0.6s ease-out;
+    }
+  
+    .animate-blink {
+      animation: blink 1s steps(2, start) infinite;
+    }
+  
+    .animate-spinner-box {
+      animation: spinnerBox 1.5s ease-in-out infinite;
+    }
+  
+    .animate-glow {
+      animation: glowText 3s linear infinite;
+    }
+  
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+  
+    @keyframes spinnerBox {
+      0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.3) rotate(180deg);
+        opacity: 0.6;
+      }
+    }
+  
+    @keyframes glowText {
+      0%, 100% { filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0)); }
+      50% { filter: drop-shadow(0 0 10px rgba(180, 100, 255, 0.7)); }
+    }
+  }
+
+
+  
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+  }
+  
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .app-container {
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+.new-style-text {
+  transition: none;
+  line-height: 17px;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px 5px;
+  letter-spacing: 0px;
+  font-weight: 800;
+  font-size: 25px;
+  white-space: nowrap;
+  min-height: 0px;
+  min-width: 1170px;
+  max-height: none;
+  opacity: 1;
+  color: #1f1f1f; /* Ganti jika di gambar warnanya bukan hitam */
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transform-origin: 50% 50%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+
