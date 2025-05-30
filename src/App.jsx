@@ -38,7 +38,7 @@ const AddCustomer = React.lazy(() => import("./pages/AddCustomer"))
 
 const GuestLayout = React.lazy(() => import("./layouts/GuestLayout"))
 const GuestPage = React.lazy(() => import("./pages/Guest/GuestPage"))
-
+const Products = React.lazy(() => import("./pages/Products"))
 
 import CekStokProduk from "./pages/Guest/CekStokProduk.jsx";
 
@@ -67,6 +67,7 @@ function App() {
                     <Route path='/' element={<Dashboard />} />
                     <Route path='/orders' element={<Orders />} />
                     <Route path='/customers' element={<Customers />} />
+                    <Route path="products" element={<Products />} />
                   </Route>
                   
 

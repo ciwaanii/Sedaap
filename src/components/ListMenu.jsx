@@ -2,6 +2,8 @@ import { FcCustomerSupport } from "react-icons/fc";
 import { GrUnorderedList } from "react-icons/gr"; 
 import { RiDashboardFill } from "react-icons/ri"; 
 import { Link, NavLink } from "react-router-dom";
+import { MdFastfood, MdOutlineFastfood } from "react-icons/md";
+
 
 export default function ListMenu() {
 
@@ -39,6 +41,16 @@ export default function ListMenu() {
                                 <NavLink id="menu-6" to="/error/403" className={menuClass}>
                                     <FcCustomerSupport  className="mr-4 text-xl"/>403</NavLink>
                               </li>
+                              <li>
+                                    <NavLink
+                                            id="menu-4"
+                                            to="/products"
+                                            className={menuClass}
+                                        >
+                                            <MdFastfood className="mr-4 text-xl" />
+                                            Products
+                                    </NavLink>
+                                </li>
                         </ul>
                     </div>
     );
