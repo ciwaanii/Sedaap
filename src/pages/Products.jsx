@@ -2,18 +2,17 @@ import PageHeader from "../components/PageHeader";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 export default function Products() {
   const breadcrumb = ["Dashboard", "Product List"];
 
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
-  const [query, setQuery] = useState("")
 
   useEffect(() => {
-     const timeout = setTimeout(() => {
     axios
-      .get(`https://dummyjson.com/products/search?q=${query}`)
+      .get("https://dummyjson.com/products")
       .then((response) => {
         if (response.status !== 200) {
           setError(response.data.message);
@@ -24,10 +23,7 @@ export default function Products() {
       .catch((err) => {
         setError(err.message || "An unknown error occurred");
       });
-       }, 500);
-       
-        return () => clearTimeout(timeout);
-  }, [query]);
+  }, []);
 
   const errorInfo = error ? (
     <div className="bg-red-200 mb-5 p-5 text-sm font-light text-gray-600 rounded flex items-center">
@@ -40,13 +36,6 @@ export default function Products() {
     <div className="p-6 bg-green-50 min-h-screen font-sans">
       <PageHeader title="Products" breadcrumb={breadcrumb} />
       {errorInfo}
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Cari produk..."
-        className="mb-4 p-3 w-full bg-white rounded-2xl shadow-lg"
-    />
 
       <div className="overflow-x-auto rounded-xl shadow-lg mt-6">
         <table className="w-full table-auto bg-white rounded-xl overflow-hidden">
@@ -68,7 +57,14 @@ export default function Products() {
                 <td className="px-6 py-4 font-medium text-gray-700">
                   {index + 1}.
                 </td>
-                <td className="px-6 py-4">{item.title}</td>
+                <td className="px-6 py-4">
+                  <Link
+                    to={`/products/${item.id}`}
+                    className="text-emerald-400 hover:text-emerald-500"
+                  >
+                    {item.title}
+                  </Link>
+                </td>
                 <td className="px-6 py-4">{item.category}</td>
                 <td className="px-6 py-4">Rp {item.price * 1000}</td>
                 <td className="px-6 py-4">{item.brand}</td>
