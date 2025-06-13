@@ -22,7 +22,10 @@ const GuestLayout = React.lazy(() => import("./layouts/GuestLayout"));
 const GuestPage = React.lazy(() => import("./pages/Guest/GuestPage"));
 const Products = React.lazy(() => import("./pages/Products"));
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
+const Notes = React.lazy(() => import("./pages/Notes"));
 import CekStokProduk from "./pages/Guest/CekStokProduk.jsx";
+
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -41,6 +44,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/customers" element={<Customers />} />
+            <Route path="/notes" element={<Notes />} />
             <Route path="/add-order" element={<AddOrder />} />
             <Route path="/add-customer" element={<AddCustomer />} />
             <Route path="/products" element={<Products />} />
